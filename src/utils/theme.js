@@ -13,7 +13,8 @@ export const theme = {
     modal: "5% auto 5%"
   },
   fontFamily: {
-    main: "'Montserrat', sans-serif"
+    main: "'Amatic SC', cursive",
+    second: "'Josefin Sans', sans-serif"
   },
   fontWeight: {
     bold: 600,
