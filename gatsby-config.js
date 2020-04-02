@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Success Jar`,
+    title: `Słoik sukcesów`,
     description: `See your successes in one place!`,
     author: `@wakeupandcode`,
   },
