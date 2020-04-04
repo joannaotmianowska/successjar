@@ -1,18 +1,12 @@
-import React from "react"
-import styled from "styled-components"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-
-const StyledH = styled.div`
-  color: red;
-`
+import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import App from '../components/app';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Success Jar" />
-    <StyledH>Welcome to Success Jar!</StyledH>
+    <App />
   </Layout>
 )
 
