@@ -1,7 +1,7 @@
-import React from "react"
-import styled, { createGlobalStyle, ThemeProvider }  from "styled-components"
-import { theme } from "../utils/theme"
-import PropTypes from "prop-types"
+import React from 'react';
+import styled, { createGlobalStyle, ThemeProvider }  from 'styled-components';
+import { theme } from '../utils/theme';
+import PropTypes from 'prop-types';
 
 const GlobalStyle = createGlobalStyle`
     html {
