@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import Header from './header';
-import AddNewSuccessForm from './addNewSuccessForm';
-import SuccessList from './SuccessList';
+import React from 'react';
+import styled from 'styled-components';
+import Form from './form';
+import List from './list';
 
-class App extends Component {
-    render() {
-        return (
-            <>
-                <Header siteTitle="Słoik sukcesów" />
-                <AddNewSuccessForm />
-                <SuccessList />
-            </>
-        );
-    }
-}
+const StyledWrapper = styled.div`
+    height: 100vh;
+`
+
+const App = () => (
+    <StyledWrapper>
+        <Form />
+        <List />
+    </StyledWrapper>
+)
 
 export default App;

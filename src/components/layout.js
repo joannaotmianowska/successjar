@@ -26,7 +26,6 @@ const GlobalStyle = createGlobalStyle`
 const StyledWrapper = styled.div`
   font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.text};
-  background: ${({ theme }) => theme.colors.backgroundPrimary};
 `
 
 const Layout = ({ children }) => (
