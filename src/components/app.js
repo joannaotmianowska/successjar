@@ -5,6 +5,8 @@ import List from './list';
 
 const StyledWrapper = styled.div`
     height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
 `
 
 const App = () => (

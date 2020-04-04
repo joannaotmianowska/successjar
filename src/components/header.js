@@ -10,12 +10,14 @@ const StyledHeader = styled.header`
 `
 
 const StyledHeading1 = styled.h1`
-  margin: 5% 0;
-  font-size: 5rem;
+  margin: 2rem 0 3rem 0;
+  font-size: 6rem;
+  letter-spacing: .3rem;
 `
 
 const StyledSmallerHeading = styled.div`
-  font-size: 2rem;
+  font-size: 3rem;
+  letter-spacing: .2rem;
   margin: 0;
 `
 
