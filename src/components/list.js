@@ -20,15 +20,10 @@ const StyledWrapper = styled.ul`
     }
 `
 
-const List = () => (
+const List = ({ items }) => (
     <StyledWrapper>
-        <li>this is an examplary list item</li>
-        <li>this is an examplary list item</li>
-        <li>this is an examplary list item</li>
-        <li>this is an examplary list item</li>
-        <li>this is an examplary list item</li>
-        <li>this is an examplary list item</li>
+        { items.map(item => (<li key={Math.random()}>{item}</li>))}
     </StyledWrapper>
-)
+);
 
 export default List;
