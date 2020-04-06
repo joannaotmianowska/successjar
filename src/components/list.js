@@ -14,6 +14,7 @@ const StyledWrapper = styled.ul`
     font-size: 4rem;
     justify-self: center;
     width: 90%;
+    text-align: center;
 
     @media (min-width: 426px) {
         max-width: 40rem;
@@ -22,7 +23,11 @@ const StyledWrapper = styled.ul`
 
 const List = ({ items }) => (
     <StyledWrapper>
-        { items.map(item => (<li key={Math.random()}>{item}</li>))}
+        { items.length === 0
+            ? <li>Dodaj swoje sukcesy przez formularz u góry</li>
+            : items.map(item =>
+                (<li key={Math.random()}>{item}</li>))
+        }
     </StyledWrapper>
 );
 

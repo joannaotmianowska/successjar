@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Header from './header';
 
@@ -19,10 +19,6 @@ const StyledInput = styled.input`
     width: 90%;
     justify-self: center;
     margin-bottom: 1rem;
-
-    ::placeholder {
-        /* color: ${({ theme }) => theme.colors.text}; */
-    }
 
     @media (min-width: 426px) {
         max-width: 40rem;
@@ -45,14 +41,15 @@ const StyledButton = styled.button`
 `
 
 const Form = ({ addNewSuccess }) => {
-    let newSuccess = "";
+    const [newSuccess, setNewSuccess] = useState("");
 
     const handleOnChange = (e) => {
-        newSuccess = e.currentTarget.value;
+        setNewSuccess(e.currentTarget.value);
     }
 
     const handleOnClick = () => {
         addNewSuccess(newSuccess);
+        setNewSuccess("");
     }
 
     return (
@@ -61,6 +58,7 @@ const Form = ({ addNewSuccess }) => {
             <StyledInput
                 onChange={handleOnChange}
                 placeholder="Tutaj wpisz swój sukces"
+                value={newSuccess}
             />
             <StyledButton onClick={handleOnClick}>
                 Dodaj do listy
