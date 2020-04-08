@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Header from './header';
 
@@ -43,20 +43,36 @@ const StyledButton = styled.button`
 const Form = ({ addNewSuccess }) => {
     const [newSuccess, setNewSuccess] = useState("");
 
-    const handleOnChange = (e) => {
+    useEffect(() => {
+        document.addEventListener("keyup", handleKeyUp)
+    }, [newSuccess])
+
+    const addNewSuccessToTheList = (newListItem) => {
+        if (newListItem.length > 0) {
+            addNewSuccess(newSuccess);
+            setNewSuccess("");
+        }
+    }
+
+    const setNewSuccessOnInputChange = (e) => {
         setNewSuccess(e.currentTarget.value);
     }
 
+    const handleKeyUp = (e) => {
+        if (e.key === "Enter") {
+            addNewSuccessToTheList(newSuccess);
+        }
+    }
+
     const handleOnClick = () => {
-        addNewSuccess(newSuccess);
-        setNewSuccess("");
+        addNewSuccessToTheList(newSuccess);
     }
 
     return (
-        <StyledWrapper>
+        <StyledWrapper onKeyUp={handleKeyUp}>
             <Header />
             <StyledInput
-                onChange={handleOnChange}
+                onChange={setNewSuccessOnInputChange}
                 placeholder="Tutaj wpisz swój sukces"
                 value={newSuccess}
             />
