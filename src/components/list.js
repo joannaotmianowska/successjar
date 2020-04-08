@@ -15,6 +15,7 @@ const StyledWrapper = styled.ul`
     justify-self: center;
     width: 90%;
     text-align: center;
+    margin: 1rem;
 
     @media (min-width: 426px) {
         max-width: 40rem;
