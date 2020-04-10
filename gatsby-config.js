@@ -22,7 +22,7 @@ module.exports = {
         short_name: `success-jar`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `##6A0B21`,
+        theme_color: `#6A0B21`,
         display: `minimal-ui`,
         icon: `src/images/wakeup_icon.png`, // This path is relative to the root of the site.
       },
